@@ -2,8 +2,10 @@ package com._pixel8.Cyberpunked;
 
 import org.slf4j.Logger;
 
+import com._pixel8.Cyberpunked.items.Components;
 import com.mojang.logging.LogUtils;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -35,6 +37,9 @@ public class Cyberpunked
         // Note that this is necessary if and only if we want *this* class (Cyberpunked) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+        // component recipe items
+        Components.register(modEventBus);
+        
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,7 +56,9 @@ public class Cyberpunked
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Components.common_component);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
