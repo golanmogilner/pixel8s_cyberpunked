@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "cyberpunked:item/common_component"
+        "layer0": "cyberpunked:item/delta_component"
     }
 }

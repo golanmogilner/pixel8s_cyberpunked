@@ -1,3 +1,14 @@
 {
-    "item.cyberpunked.common_component": "Common component" 
+    "item.cyberpunked.zeta_component": "zeta component",
+    "item.cyberpunked.epsilon_component": "epsilon component",
+    "item.cyberpunked.delta_component": "delta component",
+    "item.cyberpunked.gamma_component": "gamma component", 
+    "item.cyberpunked.beta_component": "beta component",
+    "item.cyberpunked.alpha_component": "alpha component", 
+    "item.cyberpunked.zeta_chip": "zeta chip",
+    "item.cyberpunked.epislon_chip": "epsilon chip", 
+    "item.cyberpunked.delta_chip": "delta chip",
+    "item.cyberpunked.gamma_chip": "gamma chip",
+    "item.cyberpunked.beta_chip": "beta chip",
+    "item.cyberpunked.alpha_chip": "alpha chip"
 }
